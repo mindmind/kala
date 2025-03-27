@@ -1,1 +1,5 @@
-<h1>Kāla</h1>
+<script>
+    import MainPage from '@/pages/MainPage/MainPage.svelte'
+</script>
+
+<MainPage />
