@@ -20,9 +20,9 @@
         return minFreq * Math.pow(maxFreq / minFreq, t);
       });
     }
-    const LOW = createFrequencyGroup(20, 200, 24);   // for hours
-    const MID = createFrequencyGroup(200, 800, 60);  // for minutes
-    const HIGH = createFrequencyGroup(800, 2600, 60); // for seconds
+    const LOW = createFrequencyGroup(20, 199, 24);   // for hours
+    const MID = createFrequencyGroup(200, 799, 60);  // for minutes
+    const HIGH = createFrequencyGroup(800, 2599, 60); // for seconds
 
     let isStarted = false
     let currentFrequencies: Array<number> = [];
