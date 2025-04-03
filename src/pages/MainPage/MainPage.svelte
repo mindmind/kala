@@ -1,4 +1,6 @@
 <script lang="ts">
+    import styles from './main-page.module.scss'
+    
     import { onMount } from 'svelte'
     import { writable } from 'svelte/store'
     import * as Tone from 'tone'
@@ -147,16 +149,16 @@
     }
 </script>
 
-<h1>Kāla</h1>
+<div class={styles.wrapper}>
+    <span class={styles.clock}>{`${hours}:${minutes}:${seconds}`}</span>
 
-<h2>{`${hours}:${minutes}:${seconds}`}</h2>
+    {#if !isStarted}
+        <button on:click={startSynth}>Start</button>
+    {:else}
+        <button on:click={stopSynth}>Stop</button>
+    {/if}
 
-{#if !isStarted}
-    <button on:click={startSynth}>Start</button>
-{:else}
-    <button on:click={stopSynth}>Stop</button>
-{/if}
-
-{#each currentFrequencies as freq}
-    <div>{freq.toFixed(1)} Hz</div>
-{/each}
+    {#each currentFrequencies as freq}
+        <div>{freq.toFixed(1)} Hz</div>
+    {/each}
+</div>

@@ -1,0 +1,33 @@
+html {
+    line-height: 1.5;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    line-height: inherit;
+  }
+  
+  input,
+  textarea,
+  button {
+    font-family: inherit;
+  }
+  
+  a {
+    outline-color: var(--color-brand-600);
+  }
+  
